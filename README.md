@@ -1,44 +1,57 @@
-# Monor Workspace
+# Monor - Job Listings Platform
 
-Monorepo managed with pnpm workspaces, containing:
+A job listings site built with a monorepo architecture using pnpm workspaces.
 
-- `apps/frontend` – Vite + Vue frontend
-- `apps/backend` – Express + TypeScript backend
-- `packages/shared` – Shared types and validation (using Zod)
+## Project Structure
 
-## Setup
+```
+monor/
+├── apps/
+│   ├── frontend/         # Vue + Vite frontend
+│   └── backend/          # Express + TypeScript API
+├── packages/
+│   ├── shared/           # Shared types & validation (Zod)
+│   └── db/               # Prisma database layer
+└── builds/               # Production builds
+```
 
-```powershell
-cd C:\Users\roman\Documents\monor
+## Tech Stack
+
+- **Frontend:** Vue 3, Vite (With proxy to backend), TypeScript
+- **Backend:** Express, TypeScript, Prisma
+- **Database:** PostgreSQL (prod)
+- **Validation:** Zod
+- **Monorepo:** pnpm workspaces
+
+## Getting Started
+
+```bash
+# Install dependencies
 pnpm install
-```
 
-## Development
-
-- Frontend only:
-
-```powershell
+# Start frontend dev server
 pnpm dev:frontend
-```
 
-- Backend only:
-
-```powershell
+# Start backend dev server
 pnpm dev:backend
-```
 
-- All dev scripts (frontend + backend) in parallel:
-
-```powershell
+# Start both
 pnpm dev
 ```
 
-## Using shared package
+## Scripts
 
-From frontend or backend, import shared types/validation:
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Run all dev servers |
+| `pnpm dev:frontend` | Run frontend only |
+| `pnpm dev:backend` | Run backend only |
+| `pnpm build` | Build all packages |
+
+## Shared Package
+
+Import shared types and validation schemas in frontend or backend:
 
 ```ts
 import { User, UserSchema } from "shared";
 ```
-
-`UserSchema` is a Zod schema; `User` is the inferred TypeScript type.
