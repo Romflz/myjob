@@ -14,5 +14,5 @@ onMounted(async () => {
 </script>
 
 <template>
-  <h1>{{ apiResponse }}</h1>
+  <h1 class="text-red-500">{{ apiResponse }}</h1>
 </template>
