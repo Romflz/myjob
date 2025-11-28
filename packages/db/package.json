@@ -26,14 +26,10 @@
     "prisma": "^7.0.0"
   },
   "dependencies": {
-    "@libsql/client": "^0.15.15",
-    "@prisma/adapter-better-sqlite3": "^7.0.0",
-    "@prisma/adapter-libsql": "^7.0.0",
+    "@monor/env": "workspace:*",
     "@prisma/adapter-pg": "^7.0.0",
     "@prisma/client": "^7.0.0",
-    "better-sqlite3": "^12.4.6",
     "bindings": "^1.5.0",
-    "@monor/env": "workspace:*",
     "pg": "^8.16.3"
   }
 }
