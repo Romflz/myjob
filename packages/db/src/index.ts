@@ -1,4 +1,4 @@
-import { DATABASE_URL } from 'env'
+import { DATABASE_URL } from '@monor/env'
 import pg from 'pg'
 import { PrismaPg } from '@prisma/adapter-pg'
 import { PrismaClient } from '../generated/prisma/client'

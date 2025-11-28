@@ -1,7 +1,7 @@
 import express from 'express'
 import { Request, Response } from 'express'
 
-import { createUser, getUserById } from 'db/actions'
+import { createUser, getUserById } from '@monor/db/actions'
 
 const app = express()
 const port = process.env.PORT || 3000

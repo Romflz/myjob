@@ -14,16 +14,19 @@ importers:
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
+      prettier:
+        specifier: ^3.4.2
+        version: 3.7.1
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
 
   apps/backend:
     dependencies:
-      db:
+      '@monor/db':
         specifier: workspace:*
         version: link:../../packages/db
-      env:
+      '@monor/env':
         specifier: workspace:*
         version: link:../../packages/env
       express:
@@ -91,6 +94,9 @@ importers:
       '@libsql/client':
         specifier: ^0.15.15
         version: 0.15.15
+      '@monor/env':
+        specifier: workspace:*
+        version: link:../env
       '@prisma/adapter-better-sqlite3':
         specifier: ^7.0.0
         version: 7.0.0
@@ -109,9 +115,6 @@ importers:
       bindings:
         specifier: ^1.5.0
         version: 1.5.0
-      env:
-        specifier: workspace:*
-        version: link:../env
       pg:
         specifier: ^8.16.3
         version: 8.16.3
@@ -1683,6 +1686,11 @@ packages:
   prebuild-install@7.1.3:
     resolution: {integrity: sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug==}
     engines: {node: '>=10'}
+    hasBin: true
+
+  prettier@3.7.1:
+    resolution: {integrity: sha512-RWKXE4qB3u5Z6yz7omJkjWwmTfLdcbv44jUVHC5NpfXwFGzvpQM798FGv/6WNK879tc+Cn0AAyherCl1KjbyZQ==}
+    engines: {node: '>=14'}
     hasBin: true
 
   prisma@7.0.0:
@@ -3566,6 +3574,8 @@ snapshots:
       simple-get: 4.0.1
       tar-fs: 2.1.4
       tunnel-agent: 0.6.0
+
+  prettier@3.7.1: {}
 
   prisma@7.0.0(@types/react@19.2.7)(better-sqlite3@12.4.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(typescript@5.9.3):
     dependencies:

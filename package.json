@@ -8,11 +8,14 @@
     "dev": "pnpm -r dev",
     "build": "pnpm -r build",
     "build:frontend": "pnpm --filter frontend build",
-    "build:backend": "pnpm --filter backend build"
+    "build:backend": "pnpm --filter backend build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
     "dotenv": "^17.2.3",
+    "prettier": "^3.4.2",
     "typescript": "^5.9.3"
   }
 }
