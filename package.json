@@ -11,6 +11,8 @@
     "build:backend": "pnpm --filter backend build"
   },
   "devDependencies": {
-    "@types/node": "^24.10.1"
+    "@types/node": "^24.10.1",
+    "dotenv": "^17.2.3",
+    "typescript": "^5.9.3"
   }
 }

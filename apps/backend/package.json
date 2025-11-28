@@ -15,7 +15,8 @@
   "packageManager": "pnpm@10.23.0",
   "dependencies": {
     "express": "^5.1.0",
-    "shared": "workspace:*"
+    "db": "workspace:*",
+    "env": "workspace:*"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",
