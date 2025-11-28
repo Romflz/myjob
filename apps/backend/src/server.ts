@@ -14,7 +14,7 @@ app.get('/api/health', (_req, res) => {
 })
 
 app.post('/api/user/create', async (req: Request, res: Response) => {
-	console.log('INCOMING REQ BODY:', req.body)
+  console.log('INCOMING REQ BODY:', req.body)
   const data = {
     email: req.body.email,
     name: req.body.name,
@@ -26,7 +26,7 @@ app.post('/api/user/create', async (req: Request, res: Response) => {
 app.get('/api/user/:id', async (req: Request, res: Response) => {
   const userId = parseInt(req.params.id, 10)
   const user = await getUserById(userId)
-	res.json(user)
+  res.json(user)
 })
 
 app.listen(port, () => {

@@ -41,17 +41,17 @@ pnpm dev
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Run all dev servers |
-| `pnpm dev:frontend` | Run frontend only |
-| `pnpm dev:backend` | Run backend only |
-| `pnpm build` | Build all packages |
+| Command             | Description         |
+| ------------------- | ------------------- |
+| `pnpm dev`          | Run all dev servers |
+| `pnpm dev:frontend` | Run frontend only   |
+| `pnpm dev:backend`  | Run backend only    |
+| `pnpm build`        | Build all packages  |
 
 ## Shared Package
 
 Import shared types and validation schemas in frontend or backend:
 
 ```ts
-import { User, UserSchema } from "shared";
+import { User, UserSchema } from 'shared'
 ```
